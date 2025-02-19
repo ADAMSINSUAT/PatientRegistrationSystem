@@ -1,3 +1,35 @@
+Initial Setup:
+
+1. Open the terminal and run the command npm install
+2. Run the command composer install
+3. Create a new mySQL connection with the hostname: 127.0.0.1 and port: 3306. Set root as the username and password.
+4. Copy the .env.example file and paste it. Rename the new .env.example file as .env only.
+5. Open the .env file inside VS Code. Set the following values to the following code:
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=emr_db
+    DB_USERNAME=root
+    DB_PASSWORD=root
+6. Go to the public folder and extract the emr_db rar to the MYSQL data directory. Example location: C:\ProgramData\MySQL\MySQL Server 8.0\Data
+7. Try searching for the emr_db inside the mySQL connection you created earlier back in step 3. If it's not found, then create a new schema and name it as emr_db and continue with step 8a to 11a.
+8. Run the command php artisan db:seed.
+9. Run the command php artisan serve to start the program.
+10. Go to this link: http://127.0.0.1:8000.
+
+When emr_db is not detected by the mySQL connection:
+8a. Run the command php artisan migrate. If any migrations were skipped or not run successfully, kindly run the command php artisan migrate --path={Path of the migration} for each unsuccessful migration file. If you want to get the path of the migration, just right click on the migration and select copy relative path. The migration folder is located under database->migration. Run the following migrations in order: database\migrations\2025_02_14_085232_create_patients_table.php -> database\migrations\2025_02_14_085442_create_physicians_table.php -> database\migrations\2025_02_14_085243_create_patientdetails_table.php.
+9a. Run the command php artisan db:seed.
+10a. Run the command php artisan serve to start the program.
+11a. Go to this link: http://127.0.0.1:8000.
+
+Usage of the system:
+1. Click the add patient button to create a new patient. Fill up all the fields and make sure none are left empty. Click save once you're done.
+2. Click the add diagnosis button and select the type of consultation, type the chief complaint, and select the physician.
+3. Click the view diagnosis to view all previous diagnoses.
+4. Click the edit diagnosis button to change the diagnosis. Make sure to not leave any field empty. Click update once you're done.
+5. Click the delete diagnosis button to soft delete the record (it will still exist in the database). Click yes to confirm deletion. 
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
