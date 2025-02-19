@@ -169,7 +169,7 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="addpatientDetailsModalLabel">Add Patient Diagnosis Form
+                                <h5 class="modal-title" id="addpatientDetailsModalLabel">Add Patient Consultation Form
                                 </h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
@@ -222,14 +222,14 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="viewpatientDetailsModalLabel">Patient Diagnosis History
+                                <h5 class="modal-title" id="viewpatientDetailsModalLabel">Patient Consultation History
                                 </h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <p id="nopatientdiagnosis" hidden>This patient has no diagnosis yet</p>
+                                <p id="nopatientdiagnosis" hidden>This patient has no consultation yet</p>
                                 <table class="table table-bordered" id="patientdetailsTable" width="100%"
                                     cellspacing="0">
                                     <thead>
@@ -259,7 +259,7 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="updatepatientDetailsModalLabel">Update Patient Diagnosis
+                                <h5 class="modal-title" id="updatepatientDetailsModalLabel">Update Patient Consultation
                                     Form
                                 </h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -317,7 +317,7 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="deletepatientDetailsConfirmModalLabel">Delete this patient
-                                    diagnosis record?
+                                    consultation record?
                                 </h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
@@ -366,11 +366,11 @@
                                                 <td><button style="width:100%" type="button" id="addpatientDetails"
                                                         class="btn btn-primary mb-2" data-toggle="modal"
                                                         data-target="#addpatientDetailsModal" value={{ $patient->id }}>Add
-                                                        Diagnosis</button>
+                                                        Consultation</button>
                                                     <button style="width:100%" type="button" id="viewpatientDetails"
                                                         class="btn btn-primary mb-2" data-toggle="modal"
                                                         data-target="#viewpatientDetailsModal" value={{ $patient->id }}>View
-                                                        Diagnosis</button>
+                                                        Consultation</button>
                                                 </td>
                                             </tr>
                                         @endforeach
@@ -511,10 +511,10 @@
                             
                             <td><button style="width:100%" type="button" id="updatepatientDetails" value="${response.message.id}"
                             class="btn btn-primary mb-2" data-toggle="modal"
-                            data-target="#updatepatientDetailsModal" data-dismiss="modal">Edit Diagnosis</button>
+                            data-target="#updatepatientDetailsModal" data-dismiss="modal">Edit Consultation</button>
                             <button style="width:100%" type="button" id="deletepatientDetailsConfirm" value="${response.message.id}"
                             class="btn btn-primary mb-2" data-toggle="modal"
-                            data-target="#deletepatientDetailsConfirmModal" data-dismiss="modal">Delete Diagnosis</button></td>
+                            data-target="#deletepatientDetailsConfirmModal" data-dismiss="modal">Delete Consultation</button></td>
                         </tr>
                     `);
 
