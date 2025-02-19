@@ -17,7 +17,8 @@ Initial Setup:
 9. Run the command php artisan serve to start the program.
 10. Go to this link: http://127.0.0.1:8000.
 
-When emr_db is not detected by the mySQL connection:
+When emr_db is not detected by the mySQL connection
+
 8a. Run the command php artisan migrate. If any migrations were skipped or not run successfully, kindly run the command php artisan migrate --path={Path of the migration} for each unsuccessful migration file. If you want to get the path of the migration, just right click on the migration and select copy relative path. The migration folder is located under database->migration. Run the following migrations in order: database\migrations\2025_02_14_085232_create_patients_table.php -> database\migrations\2025_02_14_085442_create_physicians_table.php -> database\migrations\2025_02_14_085243_create_patientdetails_table.php.
 9a. Run the command php artisan db:seed.
 10a. Run the command php artisan serve to start the program.
