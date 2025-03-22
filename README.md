@@ -1,3 +1,6 @@
+Prerequisites:
+* Must have mySQL server and mySQL workbench installed.
+
 Initial Setup:
 
 1. Open the terminal and run the command npm install
